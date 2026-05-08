@@ -1,0 +1,371 @@
+/* Order Summary Styles */
+.order-summary {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+
+.order-title {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 0.5rem;
+}
+
+.section-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Order Type Section */
+.order-type-section {
+  margin-bottom: 1rem;
+}
+
+.order-type-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.order-type-btn {
+  flex: 1;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.order-type-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.order-type-btn.active {
+  background: #ff6b35;
+  color: white;
+  border-color: #ff6b35;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #ff6b35;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+.form-textarea:focus {
+  border-color: #ff6b35;
+}
+
+/* Order Items Section */
+.order-items-section {
+  flex: 1;
+  margin-bottom: 1rem;
+  min-height: 0;
+}
+
+.items-title {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.empty-order {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+.empty-order p {
+  margin: 0.5rem 0;
+}
+
+.order-items {
+  overflow-y: auto;
+  max-height: 300px;
+  padding-right: 0.5rem;
+}
+
+.order-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.order-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.order-items::-webkit-scrollbar-thumb {
+  background: #ff6b35;
+  border-radius: 3px;
+}
+
+.order-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.item-info {
+  margin-bottom: 0.75rem;
+}
+
+.item-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.veg-indicator {
+  font-size: 0.8rem;
+}
+
+.item-price-row {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.unit-price {
+  font-style: italic;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quantity-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.quantity-btn:hover {
+  background: #e55a30;
+  transform: scale(1.1);
+}
+
+.quantity {
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+}
+
+.item-total {
+  position: absolute;
+  top: 0.75rem;
+  right: 2.5rem;
+  font-weight: 700;
+  color: #ff6b35;
+  font-size: 0.9rem;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.remove-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.special-instructions {
+  margin-top: 0.5rem;
+}
+
+.instructions-input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.instructions-input:focus {
+  border-color: #ff6b35;
+}
+
+/* Order Total Section */
+.order-total-section {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subtotal-row, .tax-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  padding-top: 0.5rem;
+  border-top: 2px solid #dee2e6;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.clear-btn {
+  flex: 1;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  flex: 2;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.submit-btn:disabled, .clear-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-type-buttons {
+    flex-direction: column;
+  }
+
+  .order-type-btn {
+    flex: none;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .item-total {
+    position: static;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .remove-btn {
+    position: static;
+    margin: 0.5rem auto 0;
+    display: block;
+  }
+}
